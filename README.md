@@ -37,6 +37,7 @@ Output will be as shown:
 
 
 A  B  C
+
 By entering "1 2" you moved top element from column 1(A) to column 2(B).
 Similarily you can move to column 3(C).
 
@@ -44,9 +45,7 @@ The solution will look like this
 
    1                    
    
-   
    2                      
-   
    
 A  B  C   
 
@@ -54,11 +53,9 @@ A  B  C
 OR
 
 
-     1                    
+      1                    
    
-   
-     2                      
-   
+      2                      
    
 A  B  C 
 
