@@ -5,26 +5,33 @@ void display(char [][3],int n, int m);
 void check(char [][3],int n,int m);
 int c;
 int main(){
-    int n;
-    char z,x;
-    printf("Enter Level: ");
-    scanf("%d",&n);
-    int m=pow(2,n)-1;
-    n++;
-    char a[n][3];
-    for(int i=0;i<n-1;i++){
-        a[i][0]=i+1;
-    }
-    for(int i=1;i<3;i++){
-        for(int j=0;j<n-1;j++){
-            a[j][i]='\0';
+    while(1){
+        int n;
+        char z,x;
+        printf("\n\nEnter Level: ");
+        scanf("%d",&n);
+        if(n<65&&n>0){
+            int m=pow(2,n)-1;
+            n++;
+            char a[n][3];
+            for(int i=0;i<n-1;i++){
+                a[i][0]=i+1;
+            }
+            for(int i=1;i<3;i++){
+                for(int j=0;j<n-1;j++){
+                    a[j][i]='\0';
+                }
+            }
+            a[n-1][0]='A';
+            a[n-1][1]='B';
+            a[n-1][2]='C';
+            
+            display(a,n,m);
+        }
+        else{
+            printf("Invalid Level");
         }
     }
-    a[n-1][0]='A';
-    a[n-1][1]='B';
-    a[n-1][2]='C';
-    
-    display(a,n,m);
     return 0;
 }
 void move(char a[][3],int n,int m){
